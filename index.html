@@ -68,7 +68,7 @@
             event.preventDefault();
             var apiKey = document.getElementById('apiKeyInput').value;
             var prompt = document.getElementById('promptInput').value;
-            var apiUrl = 'https://api.openai.com/v1/completions'; // API endpoint
+            var apiUrl = 'https://api.openai.com/v1/chat/completions'; // API endpoint
             var headers = {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + apiKey // Include the API key in the request headers
