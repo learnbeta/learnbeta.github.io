@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Demo 3</title>
+    <title>ChatGPT Demo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,6 +54,8 @@
     <div class="container">
         <h1>ChatGPT Demo</h1>
         <form id="chatForm">
+            <input type="text" id="apiKeyInput" placeholder="Enter your OpenAI API key here">
+            <br>
             <input type="text" id="promptInput" placeholder="Enter your prompt here">
             <br>
             <input type="submit" value="Get Response">
@@ -64,8 +66,8 @@
     <script>
         document.getElementById('chatForm').addEventListener('submit', function(event) {
             event.preventDefault();
+            var apiKey = document.getElementById('apiKeyInput').value;
             var prompt = document.getElementById('promptInput').value;
-            var apiKey = prompt("Please enter your OpenAI API key:"); // Prompt the user for the API key
             var apiUrl = 'https://api.openai.com/v1/completions'; // API endpoint
             var headers = {
                 'Content-Type': 'application/json',
